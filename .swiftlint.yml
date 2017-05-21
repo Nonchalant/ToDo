@@ -1,0 +1,81 @@
+reporter: xcode
+
+disabled_rules:
+  - type_name
+  - unused_optional_binding
+
+opt_in_rules:
+  - closure_spacing
+  - conditional_returns_on_newline
+  - empty_count
+  - explicit_init
+  - force_unwrapping
+  - missing_docs
+  - overridden_super_call
+  - redundant_nil_coalesing
+  - vertical_whitespace
+
+included:
+  - ToDo
+  - ToDoTests
+
+closing_brace: error
+closure_spacing: error
+colon: error
+comma: error
+control_statement: error
+cyclomatic_complexity:
+  warning: 15
+  error: 20
+explicit_init: error
+file_length:
+  warning: 400
+  error: 500
+force_cast: error
+force_try: error
+force_unwrapping: error
+function_body_length:
+  warning: 100
+  error: 100
+function_parameter_count:
+  warning: 6
+  error: 6
+large_tuple:
+  warining: 5
+  error: 7
+leading_whitespace: error
+legacy_cggeometry_functions: error
+legacy_constant: error
+legacy_constructor: error
+legacy_nsgeometry_functions: error
+line_length:
+  warning: 200
+  error: 200
+mark: error
+nesting: error
+opening_brace: error
+operator_whitespace: error
+overridden_super_call: error
+private_outlet:
+  severity: error
+  allow_private_set: true
+redundant_nil_coalesing: error
+return_arrow_whitespace: error
+statement_position:
+  severity: error
+todo: warning
+trailing_newline: error
+trailing_semicolon: error
+trailing_whitespace:
+  severity: error
+type_body_length:
+  warning: 150
+  error: 200
+type_name:
+  min_length: 3
+  max_length: 50
+valid_docs: error
+variable_name:
+  min_length: 1
+  max_length: 40
+vertical_whitespace: error

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Jki-oB-SIL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="EcZ-ko-J6q">
+            <objects>
+                <viewController id="Jki-oB-SIL" customClass="SplashViewController" customModule="Presentation" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v03-zL-pJd"/>
+                        <viewControllerLayoutGuide type="bottom" id="bw8-gv-9Sf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Sc-Xr-aFE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dfY-1T-0K5" customClass="LaunchScreen" customModule="Presentation">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dfY-1T-0K5" firstAttribute="top" secondItem="9Sc-Xr-aFE" secondAttribute="top" id="06f-dD-N0V"/>
+                            <constraint firstItem="dfY-1T-0K5" firstAttribute="leading" secondItem="9Sc-Xr-aFE" secondAttribute="leading" id="7js-YE-Ue0"/>
+                            <constraint firstAttribute="trailing" secondItem="dfY-1T-0K5" secondAttribute="trailing" id="ofs-Y6-kh3"/>
+                            <constraint firstItem="bw8-gv-9Sf" firstAttribute="top" secondItem="dfY-1T-0K5" secondAttribute="bottom" id="uuy-cG-r5m"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TCv-fb-mOs"/>
+                    <connections>
+                        <segue destination="hs2-1l-D8G" kind="showDetail" identifier="Home" animates="NO" action="showViewController:sender:" id="U3R-pW-8aw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UaE-Am-89z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.199999999999999" y="-40.029985007496258"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="CPc-CA-SUF">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="hs2-1l-D8G" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uaF-dr-CNg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="-40"/>
+        </scene>
+    </scenes>
+</document>

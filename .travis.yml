@@ -1,0 +1,12 @@
+language: swift
+osx_image: xcode8.3
+
+cache:
+  - bundler
+
+install:
+  - bundle install --path=vendor/bundle
+  - bundle exec fastlane ios setup
+
+script:
+  - bundle exec fastlane ios test

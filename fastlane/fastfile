@@ -1,0 +1,36 @@
+fastlane_version "2.30.2"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    clear_derived_data(derived_data_path: "./DerivedData")
+  end
+
+  desc "Runs setup"
+  lane :setup do
+    unless File.exist?("../Pods/Manifest.lock") && FileUtils.cmp("../Podfile.lock", "../Pods/Manifest.lock") then
+      cocoapods(
+        verbose: true,
+        repo_update: true
+      )
+    end
+  end
+
+  desc "Runs synx"
+  lane :synx do
+    synx
+  end
+
+  desc "Runs all the tests"
+  lane :test do
+    scan(
+      scheme: "ToDo",
+      device: "iPhone 7",
+      derived_data_path: "./DerivedData",
+      skip_build: true,
+      skip_slack: true,
+      clean: true
+    )
+  end
+end
